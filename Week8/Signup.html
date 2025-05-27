@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Sign Up</title>
+   
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            $("#signUpForm").submit(()=>{
+                event.preventDefault();
+                var name=$("#username").val();
+                var password=$("#pwd").val();
+                var work=$("#work").val();
+                $.ajax({
+                    url:"/register",
+                    type:"POST",
+                    contentType:"application/json",
+                    dataType:"json",
+                    data:JSON.stringify({
+                        name:name,
+                        password:password,
+                        work:work,
+                    }),
+                    success:function(data){
+                     var tokenData=data;
+                     if(tokenData.signup==false){
+                         alert("You are already registered with us");
+                     }
+                     else{
+                        window.location.href="/login";
+                     }
+            },
+            error:function(data){
+                console.log("Something went wrong");
+            }
+        });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>SignUp</h2>
+    <form id="signUpForm">
+     <label for="username">Username</label><br>
+     <input type="text" id="username" name="username"><br>
+     <label for="work">Profession:</label>
+     <input type="text" id="work" name="work"><br>
+     <label for="pwd">Password</label>
+     <input type="password" id="pwd" name="pwd"><br><br>
+     <input type="submit" value="Submit">
+     <p id="msg"></p>
+    </form>
+</body>
+</html>

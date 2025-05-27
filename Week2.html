@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Simple Webpage using bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<style>
+    form{
+        position: absolute;
+        right: 0px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <nav class="navbar nav navbar-expand-md bg-light">
+            <a class="navbar-brand nav-link" href="#">
+                <img src="https://www.cmrit.ac.in/wp-content/uploads/2021/07/about_overview-1.jpg" height="30px" width="30px">CMRIT
+            </a>
+            <ul class="collapse navbar-collapse navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Programs offered</a>
+                    <div class="dropdown-menu">
+                        <a class="drop-item" href="#">B.Tech</a>
+                        <a class="drop-item" href="#">M.Tech</a>
+                        <a class="drop-item" href="#">MBA</a>
+                    </div>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                </li>
+                <form class="form-inline">
+                    <input type="text" placeholder="Search">
+                    <button class="btn btn-outline-success">Search</button>
+                </form>
+            
+        </ul>
+        </nav>
+    </div>
+    <div class="container-fluid jumbotron">
+        <h1>Hello Students</h1>
+        <p>THis is starting page</p>
+        <button class="btn btn-primary">Learn more</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>CSE</h4>
+                <p> Core Computer Science Engineering</p>
+                <button class="btn btn-info">Learn More</button>
+            </div>
+            <div class="col-md-4">
+                <h4>CSE(AI&ML)</h4>
+                <p> CSE with Ai and ML Specialization</p>
+                <button class="btn btn-warning">Learn More</button>
+            </div>
+            <div class="col-md-4">
+                <h4>ECE</h4>
+                <p> Electronic and Electrical engineering</p>
+                <button class="btn btn-info">Learn More</button>
+            </div>
+            <div class="col-md-4">
+                <h4>CSE(DS)</h4>
+                <p> CSE with Data Science Specialization</p>
+                <button class="btn btn-danger">Learn More</button>
+            </div>
+        </div>
+        <div class="footer text-center">
+            <p>Copyright 2025</p>
+        </div>
+    </div>
+</body>
+</html>
